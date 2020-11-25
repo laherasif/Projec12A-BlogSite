@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from 'gatsby'
+import { Link , graphql } from 'gatsby'
 // import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import 'fontawesome-4.7'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -9,24 +9,8 @@ export default function Home({ data }) {
   return (
   <div>
      <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <a className="navbar-brand" href="#">Gatsby Blog Site </a>
-        {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon" />
-        </button> */}
-        {/* <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Features</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Pricing</a>
-            </li>
-
-          </ul>
-        </div> */}
+        <Link className="navbar-brand" to="/">Gatsby Blog Site </Link>
+       
       </nav>  
 
     <section className="blog spad">
@@ -59,9 +43,9 @@ export default function Home({ data }) {
       
       
       <div className="col-lg-12 text-center">
-        <a href="#" className="primary-btn load-btn">
+        <Link to="#" className="primary-btn load-btn">
           Load more posts
-        </a>
+        </Link>
       </div>
     </div>
   </div>
@@ -73,28 +57,21 @@ export default function Home({ data }) {
             <div className="col-lg-4 col-md-6 col-sm-7">
               <div className="footer__about">
                 <div className="footer__logo">
-                  {/* <a href="./index.html"><img src="img/logo.png" alt /></a> */}
                   <h2>Shopping Mart </h2>
                 </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
               cilisis.</p>
-                {/* <div className="footer__payment">
-              <a href="#"><img src="img/payment/payment-1.png" alt /></a>
-              <a href="#"><img src="img/payment/payment-2.png" alt /></a>
-              <a href="#"><img src="img/payment/payment-3.png" alt /></a>
-              <a href="#"><img src="img/payment/payment-4.png" alt /></a>
-              <a href="#"><img src="img/payment/payment-5.png" alt /></a>
-            </div> */}
+                
               </div>
             </div>
             <div className="col-lg-2 col-md-3 col-sm-5">
               <div className="footer__widget">
                 <h6>Quick links</h6>
                 <ul>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Blogs</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">FAQ</a></li>
+                  <li><Link to="/">About</Link></li>
+                  <li><Link to="/">Blogs</Link></li>
+                  <li><Link to="/">Contact</Link></li>
+                  <li><Link to="/">FAQ</Link></li>
                 </ul>
               </div>
             </div>
@@ -102,10 +79,10 @@ export default function Home({ data }) {
               <div className="footer__widget">
                 <h6>Account</h6>
                 <ul>
-                  <li><a href="#">My Account</a></li>
-                  <li><a href="#">Orders Tracking</a></li>
-                  <li><a href="#">Checkout</a></li>
-                  <li><a href="#">Wishlist</a></li>
+                  <li><Link to="/">My Account</Link></li>
+                  <li><Link to="/">Orders Tracking</Link></li>
+                  <li><Link to="/">Checkout</Link></li>
+                  <li><Link to="/">Wishlist</Link></li>
                 </ul>
               </div>
             </div>
@@ -117,11 +94,11 @@ export default function Home({ data }) {
                   <button type="submit" className="site-btn">Subscribe</button>
                 </form>
                 <div className="footer__social">
-                  <a href="#"><i className="fa fa-facebook" /></a>
-              <a href="#"><i className="fa fa-twitter" /></a>
-              <a href="#"><i className="fa fa-youtube-play" /></a>
-              <a href="#"><i className="fa fa-instagram" /></a>
-              <a href="#"><i className="fa fa-pinterest" /></a>
+                  <Link to="#"><i className="fa fa-facebook" /></Link>
+              <Link to="#"><i className="fa fa-twitter" /></Link>
+              <Link to="#"><i className="fa fa-youtube-play" /></Link>
+              <Link to="#"><i className="fa fa-instagram" /></Link>
+              <Link to="#"><i className="fa fa-pinterest" /></Link>
                 </div>
               </div>
             </div>
