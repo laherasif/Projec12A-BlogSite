@@ -25,24 +25,8 @@ export default function Product({ pageContext, data }) {
     <div>
 
       <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <a className="navbar-brand" href="#">Gatsby Blog Site </a>
-        {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon" />
-        </button> */}
-        {/* <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Features</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Pricing</a>
-            </li>
-
-          </ul>
-        </div> */}
+        <Link  className="navbar-brand" to="/">Gatsby Blog Site </Link>
+       
       </nav>
 
       <div className="breadcrumb-option" style={{marginTop:'5rem'}}>
@@ -51,7 +35,7 @@ export default function Product({ pageContext, data }) {
             <div className="col-lg-12">
               <div className="breadcrumb__links">
                 <Link to="/"><i className="fa fa-home" /> Home</Link>
-                <a href="./blog.html">Blog</a>
+                <Link to="//blog.html">Blog</Link>
                 <span><strong>Being seen</strong>:{itemDetails.title}?</span>
               </div>
             </div>
@@ -114,28 +98,28 @@ export default function Product({ pageContext, data }) {
             </p>
                 </div>
                 <div className="blog__details__tags">
-                  <a href="#">Fashion</a>
-                  <a href="#">Street style</a>
-                  <a href="#">Diversity</a>
-                  <a href="#">Beauty</a>
+                  <Link to="/">Fashion</Link>
+                  <Link to="/">Street style</Link>
+                  <Link to="/">Diversity</Link>
+                  <Link to="/">Beauty</Link>
                 </div>
                 <div className="blog__details__btns">
                   <div className="row">
                     <div className="col-lg-6 col-md-6 col-sm-6">
                       <div className="blog__details__btn__item">
                         <h6>
-                          <a href="#">
+                          <Link to="/">
                             <i className="fa fa-angle-left" /> Previous posts
-                    </a>
+                    </Link>
                         </h6>
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-6 col-sm-6">
                       <div className="blog__details__btn__item blog__details__btn__item--next">
                         <h6>
-                          <a href="#">
+                          <Link to="/">
                             Next posts <i className="fa fa-angle-right" />
-                          </a>
+                          </Link>
                         </h6>
                       </div>
                     </div>
@@ -143,9 +127,9 @@ export default function Product({ pageContext, data }) {
                 </div>
                 <div className="blog__details__comment">
                   <h5>3 Comment</h5>
-                  <a href="#" className="leave-btn">
+                  <Link to="/" className="leave-btn">
                     Leave a comment
-            </a>
+            </Link>
                   <div className="blog__comment__item">
                     <div className="blog__comment__item__pic">
                       <img src={comintOne} alt="image" />
@@ -228,29 +212,29 @@ export default function Product({ pageContext, data }) {
                   </div>
                   <ul>
                     <li>
-                      <a href="#">
+                      <Link to="/">
                         All <span>(250)</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
+                      <Link to="/">
                         Fashion week <span>(80)</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
+                      <Link to="/">
                         Street style <span>(75)</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
+                      <Link to="/">
                         Lifestyle <span>(35)</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
+                      <Link to="/">
                         Beauty <span>(60)</span>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -275,7 +259,7 @@ export default function Product({ pageContext, data }) {
                           </div>
                         </div>
                       </div>
-                      // <a href="#" className="blog__feature__item" key={index}>
+                      // <Link to="/" className="blog__feature__item" key={index}>
                       //   <div className="blog__feature__item__pic">
                       //     <img src={feture.image.file.url} alt="image"  />
                       //   </div>
@@ -283,7 +267,7 @@ export default function Product({ pageContext, data }) {
                       //   <h6><Link to={`/books/${feture.slug}`}>{feture.title}</Link></h6>
                       //     <span>Seb 17, 2019</span>
                       //   </div>
-                      // </a>
+                      // </Link>
                     )
                   })
                   }
@@ -293,10 +277,10 @@ export default function Product({ pageContext, data }) {
                     <h4>Tags cloud</h4>
                   </div>
                   <div className="blog__sidebar__tags">
-                    <a href="#">Fashion</a>
-                    <a href="#">Street style</a>
-                    <a href="#">Diversity</a>
-                    <a href="#">Beauty</a>
+                    <Link to="/">Fashion</Link>
+                    <Link to="/">Street style</Link>
+                    <Link to="/">Diversity</Link>
+                    <Link to="/">Beauty</Link>
                   </div>
                 </div>
               </div>
@@ -310,17 +294,17 @@ export default function Product({ pageContext, data }) {
             <div className="col-lg-4 col-md-6 col-sm-7">
               <div className="footer__about">
                 <div className="footer__logo">
-                  {/* <a href="./index.html"><img src="img/logo.png" alt /></a> */}
+                  {/* <Link to="//index.html"><img src="img/logo.png" alt /></Link> */}
                   <h2>Shopping Mart </h2>
                 </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
               cilisis.</p>
                 {/* <div className="footer__payment">
-              <a href="#"><img src="img/payment/payment-1.png" alt /></a>
-              <a href="#"><img src="img/payment/payment-2.png" alt /></a>
-              <a href="#"><img src="img/payment/payment-3.png" alt /></a>
-              <a href="#"><img src="img/payment/payment-4.png" alt /></a>
-              <a href="#"><img src="img/payment/payment-5.png" alt /></a>
+              <Link to="/"><img src="img/payment/payment-1.png" alt /></Link>
+              <Link to="/"><img src="img/payment/payment-2.png" alt /></Link>
+              <Link to="/"><img src="img/payment/payment-3.png" alt /></Link>
+              <Link to="/"><img src="img/payment/payment-4.png" alt /></Link>
+              <Link to="/"><img src="img/payment/payment-5.png" alt /></Link>
             </div> */}
               </div>
             </div>
@@ -328,10 +312,10 @@ export default function Product({ pageContext, data }) {
               <div className="footer__widget">
                 <h6>Quick links</h6>
                 <ul>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Blogs</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">FAQ</a></li>
+                  <li><Link to="/">About</Link></li>
+                  <li><Link to="/">Blogs</Link></li>
+                  <li><Link to="/">Contact</Link></li>
+                  <li><Link to="/">FAQ</Link></li>
                 </ul>
               </div>
             </div>
@@ -339,10 +323,10 @@ export default function Product({ pageContext, data }) {
               <div className="footer__widget">
                 <h6>Account</h6>
                 <ul>
-                  <li><a href="#">My Account</a></li>
-                  <li><a href="#">Orders Tracking</a></li>
-                  <li><a href="#">Checkout</a></li>
-                  <li><a href="#">Wishlist</a></li>
+                  <li><Link to="/">My Account</Link></li>
+                  <li><Link to="/">Orders Tracking</Link></li>
+                  <li><Link to="/">Checkout</Link></li>
+                  <li><Link to="/">Wishlist</Link></li>
                 </ul>
               </div>
             </div>
@@ -354,11 +338,11 @@ export default function Product({ pageContext, data }) {
                   <button type="submit" className="site-btn">Subscribe</button>
                 </form>
                 <div className="footer__social">
-                  <a href="#"><i className="fa fa-facebook" /></a>
-              <a href="#"><i className="fa fa-twitter" /></a>
-              <a href="#"><i className="fa fa-youtube-play" /></a>
-              <a href="#"><i className="fa fa-instagram" /></a>
-              <a href="#"><i className="fa fa-pinterest" /></a>
+                  <Link to="/"><i className="fa fa-facebook" /></Link>
+              <Link to="/"><i className="fa fa-twitter" /></Link>
+              <Link to="/"><i className="fa fa-youtube-play" /></Link>
+              <Link to="/"><i className="fa fa-instagram" /></Link>
+              <Link to="/"><i className="fa fa-pinterest" /></Link>
                 </div>
               </div>
             </div>
