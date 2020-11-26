@@ -1,11 +1,9 @@
 import React from "react"
 import { Link , graphql } from 'gatsby'
-// import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import 'fontawesome-4.7'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
 export default function Home({ data }) {
-  console.log("query", data)
   return (
   <div>
      <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
@@ -43,7 +41,7 @@ export default function Home({ data }) {
       
       
       <div className="col-lg-12 text-center">
-        <Link to="#" className="primary-btn load-btn">
+        <Link to="/" className="primary-btn load-btn">
           Load more posts
         </Link>
       </div>
@@ -94,22 +92,20 @@ export default function Home({ data }) {
                   <button type="submit" className="site-btn">Subscribe</button>
                 </form>
                 <div className="footer__social">
-                  <Link to="#"><i className="fa fa-facebook" /></Link>
-              <Link to="#"><i className="fa fa-twitter" /></Link>
-              <Link to="#"><i className="fa fa-youtube-play" /></Link>
-              <Link to="#"><i className="fa fa-instagram" /></Link>
-              <Link to="#"><i className="fa fa-pinterest" /></Link>
+                  <Link to="/"><i className="fa fa-facebook" /></Link>
+              <Link to="/"><i className="fa fa-twitter" /></Link>
+              <Link to="/"><i className="fa fa-youtube-play" /></Link>
+              <Link to="/"><i className="fa fa-instagram" /></Link>
+              <Link to="/"><i className="fa fa-pinterest" /></Link>
                 </div>
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col-lg-12">
-              {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
               <div className="footer__copyright__text">
                 <p>Copyright ©  All rights reserved | This template is made in Gatsby</p>
               </div>
-              {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
             </div>
           </div>
         </div>
